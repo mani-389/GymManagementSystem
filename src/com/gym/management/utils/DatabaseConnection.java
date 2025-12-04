@@ -15,12 +15,12 @@ public class DatabaseConnection {
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            System.out.println("✅ Database connected successfully!");
+            System.out.println(" Database connected successfully!");
         } catch (ClassNotFoundException e) {
-            System.out.println("❌ Derby JDBC Driver not found!");
+            System.out.println(" Derby JDBC Driver not found!");
             e.printStackTrace();
         } catch (SQLException e) {
-            System.out.println("❌ Connection failed!");
+            System.out.println(" Connection failed!");
             e.printStackTrace();
         }
         return conn;
@@ -30,7 +30,7 @@ public class DatabaseConnection {
         if (conn != null) {
             try {
                 conn.close();
-                System.out.println("✅ Connection closed.");
+                System.out.println(" Connection closed.");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -40,10 +40,10 @@ public class DatabaseConnection {
     public static void main(String[] args) {
         Connection conn = getConnection();
         if (conn != null) {
-            System.out.println("🎉 Test successful!");
+            System.out.println(" Test successful!");
             closeConnection(conn);
         } else {
-            System.out.println("❌ Test failed!");
+            System.out.println(" Test failed!");
         }
     }
 }

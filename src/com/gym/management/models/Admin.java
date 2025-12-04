@@ -12,7 +12,6 @@ public class Admin extends User {
     private FinanceService financeService;
     protected int adminLevel;
     
-    // Constructor
     public Admin() {
         super();
     }
@@ -25,7 +24,6 @@ public class Admin extends User {
         this.adminLevel = 1;
     }
     
-    // Implement abstract methods from User
     @Override
     public void displayRole() {
         System.out.println("Role: Administrator");
@@ -37,12 +35,10 @@ public class Admin extends User {
         return Arrays.asList("CREATE", "READ", "UPDATE", "DELETE", "MANAGE_ALL");
     }
     
-    // Admin specific methods
     protected boolean validateAdminAccess() {
         return adminLevel > 0;
     }
     
-    // Getters and Setters
     public MemberService getMemberService() {
         return memberService;
     }
