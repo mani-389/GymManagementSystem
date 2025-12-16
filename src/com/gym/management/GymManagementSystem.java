@@ -1,20 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package com.gym.management;
 
+import com.gym.management.gui.LoginFrame;
+import com.gym.management.utils.DatabaseConnection; // Ensure this is accessible
+import javax.swing.SwingUtilities;
+
 /**
- *
- * @author Nomi's
+ * Main entry point for the Gym Management System application.
  */
 public class GymManagementSystem {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // 1. Initialize Database (Optional, but good practice to check connection early)
+        // Check if the Derby database is accessible before launching the GUI.
+        System.out.println("Attempting to initialize application services...");
+        DatabaseConnection.getConnection(); 
+        
+        // 2. Launch the GUI on the Event Dispatch Thread (EDT)
+        SwingUtilities.invokeLater(() -> {
+            System.out.println("Launching Login Frame...");
+            
+            // NOTE: You will need to create the LoginFrame class in the 
+            // 'com.gym.management.gui' package next!
+            LoginFrame login = new LoginFrame();
+            login.setLocationRelativeTo(null); // Center the frame
+            login.setVisible(true);
+        });
     }
-    
 }
