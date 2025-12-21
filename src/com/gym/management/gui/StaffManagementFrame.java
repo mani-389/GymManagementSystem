@@ -72,7 +72,7 @@ public class StaffManagementFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Staff Management");
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 102, 255));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -81,16 +81,20 @@ public class StaffManagementFrame extends javax.swing.JFrame {
         txtSearch.setColumns(20);
         txtSearch.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        btnSearch.setBackground(new java.awt.Color(46, 204, 113));
-        btnSearch.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnSearch.setText("SEARCH");
+        btnSearch.setBackground(new java.awt.Color(255, 113, 11));
+        btnSearch.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(0, 0, 0));
+        btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
             }
         });
 
-        btnRefresh.setText("REFRESH");
+        btnRefresh.setBackground(new java.awt.Color(218, 166, 79));
+        btnRefresh.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnRefresh.setForeground(new java.awt.Color(0, 0, 0));
+        btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
@@ -110,7 +114,7 @@ public class StaffManagementFrame extends javax.swing.JFrame {
                 .addComponent(btnSearch)
                 .addGap(64, 64, 64)
                 .addComponent(btnRefresh)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,7 +123,7 @@ public class StaffManagementFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearch)
+                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRefresh))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
@@ -154,7 +158,8 @@ public class StaffManagementFrame extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         btnHire.setBackground(new java.awt.Color(46, 204, 113));
-        btnHire.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnHire.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnHire.setForeground(new java.awt.Color(0, 0, 0));
         btnHire.setText("Hire Staff");
         btnHire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +168,8 @@ public class StaffManagementFrame extends javax.swing.JFrame {
         });
 
         btnEdit.setBackground(new java.awt.Color(241, 196, 15));
-        btnEdit.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnEdit.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(0, 0, 0));
         btnEdit.setText("Edit Staff");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +178,8 @@ public class StaffManagementFrame extends javax.swing.JFrame {
         });
 
         btnRemove.setBackground(new java.awt.Color(231, 76, 60));
-        btnRemove.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnRemove.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnRemove.setForeground(new java.awt.Color(0, 0, 0));
         btnRemove.setText("Remove Staff");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +198,7 @@ public class StaffManagementFrame extends javax.swing.JFrame {
                 .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(130, 130, 130)
                 .addComponent(btnRemove)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

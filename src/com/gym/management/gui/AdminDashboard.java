@@ -37,18 +37,21 @@ public class AdminDashboard extends javax.swing.JFrame {
         btnManageStaff = new javax.swing.JButton();
         btnManageFinance = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        btnManageMemberships = new javax.swing.JButton();
+        btnPhysicalStats = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Admin Dashboard - Gym Management System");
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        titleLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        titleLabel.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 0));
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel.setText("ADMIN DASHBOARD");
 
-        welcomeLabel.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        welcomeLabel.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        welcomeLabel.setForeground(new java.awt.Color(204, 204, 204));
         welcomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         welcomeLabel.setText("Welcome, Administrator!");
 
@@ -88,44 +91,73 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
+        btnManageMemberships.setBackground(new java.awt.Color(241, 196, 15));
+        btnManageMemberships.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnManageMemberships.setText("MANAGE MEMBERSHIPS");
+        btnManageMemberships.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageMembershipsActionPerformed(evt);
+            }
+        });
+
+        btnPhysicalStats.setBackground(new java.awt.Color(26, 188, 156));
+        btnPhysicalStats.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnPhysicalStats.setText("VIEW PHYSICAL STATS");
+        btnPhysicalStats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPhysicalStatsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout)
-                .addGap(56, 56, 56))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(titleLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnManageMembers)
-                .addGap(27, 27, 27)
+                .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(welcomeLabel)
-                    .addComponent(btnManageStaff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(btnManageFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnManageStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnManageMemberships)
+                            .addComponent(btnManageFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnPhysicalStats, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogout)
+                        .addGap(72, 72, 72))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(184, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(titleLabel)
+                        .addGap(144, 144, 144))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(welcomeLabel)
+                        .addGap(183, 183, 183))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(25, 25, 25)
                 .addComponent(titleLabel)
-                .addGap(44, 44, 44)
+                .addGap(26, 26, 26)
                 .addComponent(welcomeLabel)
-                .addGap(117, 117, 117)
+                .addGap(47, 47, 47)
+                .addComponent(btnManageMembers)
+                .addGap(22, 22, 22)
+                .addComponent(btnManageMemberships)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(btnManageStaff)
+                .addGap(25, 25, 25)
+                .addComponent(btnManageFinance)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnManageStaff)
-                    .addComponent(btnManageFinance)
-                    .addComponent(btnManageMembers))
-                .addGap(82, 82, 82)
-                .addComponent(btnLogout)
-                .addContainerGap(77, Short.MAX_VALUE))
+                    .addComponent(btnPhysicalStats)
+                    .addComponent(btnLogout))
+                .addGap(66, 66, 66))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +204,16 @@ public class AdminDashboard extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
+    private void btnManageMembershipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageMembershipsActionPerformed
+       MembershipManagementFrame membershipFrame = new MembershipManagementFrame();
+        membershipFrame.setVisible(true);
+    }//GEN-LAST:event_btnManageMembershipsActionPerformed
+
+    private void btnPhysicalStatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhysicalStatsActionPerformed
+         PhysicalStatsFrame physicalFrame = new PhysicalStatsFrame();
+         physicalFrame.setVisible(true);
+    }//GEN-LAST:event_btnPhysicalStatsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -201,7 +243,9 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnManageFinance;
     private javax.swing.JButton btnManageMembers;
+    private javax.swing.JButton btnManageMemberships;
     private javax.swing.JButton btnManageStaff;
+    private javax.swing.JButton btnPhysicalStats;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JLabel welcomeLabel;

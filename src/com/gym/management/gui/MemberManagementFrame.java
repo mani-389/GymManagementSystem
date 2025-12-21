@@ -75,10 +75,9 @@ private DefaultTableModel tableModel;
         setTitle("Member Management");
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-
-        btnAdd.setBackground(new java.awt.Color(46, 204, 113));
-        btnAdd.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnAdd.setBackground(new java.awt.Color(51, 204, 0));
+        btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(0, 0, 0));
         btnAdd.setText("Add Member");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,8 +85,9 @@ private DefaultTableModel tableModel;
             }
         });
 
-        btnEdit.setBackground(new java.awt.Color(241, 196, 15));
-        btnEdit.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnEdit.setBackground(new java.awt.Color(153, 153, 153));
+        btnEdit.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(0, 0, 0));
         btnEdit.setText("Edit Member");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +96,8 @@ private DefaultTableModel tableModel;
         });
 
         btnDelete.setBackground(new java.awt.Color(231, 76, 60));
-        btnDelete.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(0, 0, 0));
         btnDelete.setText("Delete Member");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,17 +105,18 @@ private DefaultTableModel tableModel;
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel3.setBackground(new java.awt.Color(153, 102, 255));
 
         lblSearch.setBackground(new java.awt.Color(0, 51, 51));
-        lblSearch.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lblSearch.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         lblSearch.setForeground(new java.awt.Color(0, 0, 0));
         lblSearch.setText("Search:");
 
         txtSearch.setColumns(20);
 
-        btnSearch.setBackground(new java.awt.Color(153, 153, 255));
-        btnSearch.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnSearch.setBackground(new java.awt.Color(255, 113, 11));
+        btnSearch.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(0, 0, 0));
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,8 +124,9 @@ private DefaultTableModel tableModel;
             }
         });
 
-        btnRefresh.setBackground(new java.awt.Color(149, 165, 166));
-        btnRefresh.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnRefresh.setBackground(new java.awt.Color(218, 166, 79));
+        btnRefresh.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnRefresh.setForeground(new java.awt.Color(0, 0, 0));
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +147,7 @@ private DefaultTableModel tableModel;
                 .addComponent(btnSearch)
                 .addGap(66, 66, 66)
                 .addComponent(btnRefresh)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,7 +194,6 @@ private DefaultTableModel tableModel;
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPane1)
             .addComponent(tblMembers)
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -202,6 +204,9 @@ private DefaultTableModel tableModel;
                 .addGap(98, 98, 98)
                 .addComponent(btnDelete)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,7 +221,7 @@ private DefaultTableModel tableModel;
                     .addComponent(btnDelete))
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);

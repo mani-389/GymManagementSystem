@@ -48,7 +48,7 @@ public class FinanceFrame extends javax.swing.JFrame {
         Object[] row = {
             payment.getPaymentId(),
             payment.getPaymentType(),
-            String.format("%.2f", payment.getAmount()),
+            payment.getAmount(), 
             dateFormat.format(payment.getDate()),
             payment.getDescription()
         };
@@ -87,8 +87,11 @@ private void updateTotals() {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Finance Management");
 
-        btnRecordPayment.setBackground(new java.awt.Color(155, 89, 182));
-        btnRecordPayment.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(153, 102, 255));
+
+        btnRecordPayment.setBackground(new java.awt.Color(204, 204, 204));
+        btnRecordPayment.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btnRecordPayment.setForeground(new java.awt.Color(0, 0, 0));
         btnRecordPayment.setText("Record Payment");
         btnRecordPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,11 +100,13 @@ private void updateTotals() {
         });
 
         lblTotalRevenue.setBackground(new java.awt.Color(46, 204, 113));
-        lblTotalRevenue.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lblTotalRevenue.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        lblTotalRevenue.setForeground(new java.awt.Color(0, 0, 0));
         lblTotalRevenue.setText("Total Revenue: $0.00");
 
         lblTotalExpenses.setBackground(new java.awt.Color(231, 76, 60));
-        lblTotalExpenses.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lblTotalExpenses.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        lblTotalExpenses.setForeground(new java.awt.Color(0, 0, 0));
         lblTotalExpenses.setText("Total Expenses: $0.00");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -115,7 +120,7 @@ private void updateTotals() {
                 .addComponent(lblTotalRevenue)
                 .addGap(122, 122, 122)
                 .addComponent(lblTotalExpenses)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,6 +137,7 @@ private void updateTotals() {
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         tblPayments.setAutoCreateRowSorter(true);
+        tblPayments.setBackground(new java.awt.Color(204, 204, 204));
         tblPayments.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -157,8 +163,9 @@ private void updateTotals() {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        btnProcessSalary.setBackground(new java.awt.Color(230, 126, 34));
-        btnProcessSalary.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnProcessSalary.setBackground(new java.awt.Color(204, 204, 255));
+        btnProcessSalary.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnProcessSalary.setForeground(new java.awt.Color(0, 0, 0));
         btnProcessSalary.setText("Process Salary");
         btnProcessSalary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,8 +173,9 @@ private void updateTotals() {
             }
         });
 
-        btnRefresh.setBackground(new java.awt.Color(149, 165, 166));
+        btnRefresh.setBackground(new java.awt.Color(185, 110, 118));
         btnRefresh.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnRefresh.setForeground(new java.awt.Color(0, 0, 0));
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +203,7 @@ private void updateTotals() {
                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(113, 113, 113)
                 .addComponent(btnViewReport, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
