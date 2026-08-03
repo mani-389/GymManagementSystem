@@ -37,13 +37,13 @@ private void loadPhysicalStats() {
     
     // Sample data - matches database entries
     tableModel.addRow(new Object[]{
-        "MEM001", "Alice Johnson", "65.5", "1.70", "22.65", "Healthy", "Good physical condition"
+        "MEM001", "Affan Khan", "65.5", "1.70", "22.65", "Healthy", "Good physical condition"
     });
     tableModel.addRow(new Object[]{
-        "MEM002", "Bob Smith", "80.0", "1.80", "24.69", "Normal", "Needs to lose weight"
+        "MEM002", "Ahmed", "80.0", "1.80", "24.69", "Normal", "Needs to lose weight"
     });
     tableModel.addRow(new Object[]{
-        "MEM003", "Charlie Brown", "70.0", "1.75", "22.86", "Healthy", "Recovering from injury"
+        "MEM003", "Fatima", "70.0", "1.75", "22.86", "Healthy", "Recovering from injury"
     });
 }
 
@@ -81,10 +81,10 @@ private String getBMIStatus(double bmi) {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Physical Stats Management");
 
-        jPanel1.setBackground(new java.awt.Color(26, 188, 156));
+        jPanel1.setBackground(new java.awt.Color(153, 102, 255));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
-        titleLabel.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        titleLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(0, 0, 0));
         titleLabel.setText("MEMBER PHYSICAL STATISTICS");
 
@@ -93,7 +93,7 @@ private String getBMIStatus(double bmi) {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
+                .addContainerGap(306, Short.MAX_VALUE)
                 .addComponent(titleLabel)
                 .addGap(263, 263, 263))
         );
@@ -134,7 +134,8 @@ private String getBMIStatus(double bmi) {
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jButton1.setBackground(new java.awt.Color(46, 204, 113));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Add Stats");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +144,8 @@ private String getBMIStatus(double bmi) {
         });
 
         jButton2.setBackground(new java.awt.Color(241, 196, 15));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Edit Stats");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +154,8 @@ private String getBMIStatus(double bmi) {
         });
 
         jButton3.setBackground(new java.awt.Color(52, 152, 219));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Calculate BMI");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +164,8 @@ private String getBMIStatus(double bmi) {
         });
 
         jButton4.setBackground(new java.awt.Color(149, 165, 166));
-        jButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Refresh");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,9 +180,9 @@ private String getBMIStatus(double bmi) {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(jButton1)
-                .addGap(114, 114, 114)
+                .addGap(104, 104, 104)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(100, 100, 100)
                 .addComponent(jButton4)

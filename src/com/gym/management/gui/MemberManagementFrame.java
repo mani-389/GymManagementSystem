@@ -85,7 +85,7 @@ private DefaultTableModel tableModel;
             }
         });
 
-        btnEdit.setBackground(new java.awt.Color(153, 153, 153));
+        btnEdit.setBackground(new java.awt.Color(204, 204, 0));
         btnEdit.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnEdit.setForeground(new java.awt.Color(0, 0, 0));
         btnEdit.setText("Edit Member");
@@ -124,7 +124,7 @@ private DefaultTableModel tableModel;
             }
         });
 
-        btnRefresh.setBackground(new java.awt.Color(218, 166, 79));
+        btnRefresh.setBackground(new java.awt.Color(204, 204, 204));
         btnRefresh.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnRefresh.setForeground(new java.awt.Color(0, 0, 0));
         btnRefresh.setText("Refresh");

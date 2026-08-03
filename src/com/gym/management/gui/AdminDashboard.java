@@ -46,7 +46,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         titleLabel.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(255, 255, 0));
+        titleLabel.setForeground(new java.awt.Color(153, 102, 255));
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel.setText("ADMIN DASHBOARD");
 
@@ -56,7 +56,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         welcomeLabel.setText("Welcome, Administrator!");
 
         btnManageMembers.setBackground(new java.awt.Color(52, 152, 219));
-        btnManageMembers.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnManageMembers.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageMembers.setForeground(new java.awt.Color(0, 0, 0));
         btnManageMembers.setText("MANAGE MEMBERS");
         btnManageMembers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +65,9 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        btnManageStaff.setBackground(new java.awt.Color(46, 204, 113));
-        btnManageStaff.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnManageStaff.setBackground(new java.awt.Color(0, 153, 153));
+        btnManageStaff.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageStaff.setForeground(new java.awt.Color(0, 0, 0));
         btnManageStaff.setText("MANAGE STAFF");
         btnManageStaff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +75,9 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        btnManageFinance.setBackground(new java.awt.Color(155, 89, 182));
-        btnManageFinance.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnManageFinance.setBackground(new java.awt.Color(0, 204, 204));
+        btnManageFinance.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageFinance.setForeground(new java.awt.Color(0, 0, 0));
         btnManageFinance.setText("MANAGE FINANCE");
         btnManageFinance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,8 +94,9 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        btnManageMemberships.setBackground(new java.awt.Color(241, 196, 15));
-        btnManageMemberships.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnManageMemberships.setBackground(new java.awt.Color(255, 204, 102));
+        btnManageMemberships.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageMemberships.setForeground(new java.awt.Color(0, 0, 0));
         btnManageMemberships.setText("MANAGE MEMBERSHIPS");
         btnManageMemberships.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +105,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
 
         btnPhysicalStats.setBackground(new java.awt.Color(26, 188, 156));
-        btnPhysicalStats.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnPhysicalStats.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnPhysicalStats.setForeground(new java.awt.Color(0, 0, 0));
         btnPhysicalStats.setText("VIEW PHYSICAL STATS");
         btnPhysicalStats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,51 +118,53 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnManageStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnManageMemberships)
-                            .addComponent(btnManageFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnPhysicalStats, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLogout)
-                        .addGap(72, 72, 72))))
+                    .addComponent(btnManageStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnManageFinance, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                    .addComponent(btnManageMemberships, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(184, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLogout)
+                .addGap(72, 72, 72))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(titleLabel)
-                        .addGap(144, 144, 144))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(welcomeLabel)
-                        .addGap(183, 183, 183))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(btnPhysicalStats, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(welcomeLabel)))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(titleLabel)
                 .addGap(26, 26, 26)
+                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(welcomeLabel)
-                .addGap(47, 47, 47)
-                .addComponent(btnManageMembers)
-                .addGap(22, 22, 22)
-                .addComponent(btnManageMemberships)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(btnManageStaff)
-                .addGap(25, 25, 25)
-                .addComponent(btnManageFinance)
-                .addGap(26, 26, 26)
+                .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPhysicalStats)
-                    .addComponent(btnLogout))
-                .addGap(66, 66, 66))
+                    .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnManageMemberships, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnManageStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnManageFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnPhysicalStats, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(btnLogout)
+                .addGap(67, 67, 67))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -91,7 +91,7 @@ public class StaffManagementFrame extends javax.swing.JFrame {
             }
         });
 
-        btnRefresh.setBackground(new java.awt.Color(218, 166, 79));
+        btnRefresh.setBackground(new java.awt.Color(204, 204, 204));
         btnRefresh.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnRefresh.setForeground(new java.awt.Color(0, 0, 0));
         btnRefresh.setText("Refresh");

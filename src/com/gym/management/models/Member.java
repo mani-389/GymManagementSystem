@@ -25,8 +25,8 @@ public class Member implements Searchable {
     public boolean search(String keyword) {
         keyword = keyword.toLowerCase();
         return this.name.toLowerCase().contains(keyword) ||
-               this.memberId.toLowerCase().contains(keyword) ||
-               this.contact.contains(keyword);
+        this.memberId.toLowerCase().contains(keyword) ||
+        this.contact.contains(keyword);
     }
     
     // Getters and Setters

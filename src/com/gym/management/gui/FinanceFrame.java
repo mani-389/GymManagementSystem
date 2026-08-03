@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.gym.management.gui;
 
 import com.gym.management.models.Payment;
@@ -327,10 +324,10 @@ private void updateTotals() {
     double netProfit = revenue - expenses;
     
     String report = "=== FINANCIAL REPORT ===\n\n";
-    report += "Total Revenue: $" + String.format("%.2f", revenue) + "\n";
-    report += "Total Expenses: $" + String.format("%.2f", expenses) + "\n";
+    report += "Total Revenue: PKR" + String.format("%.2f", revenue) + "\n";
+    report += "Total Expenses: PKR" + String.format("%.2f", expenses) + "\n";
     report += "─────────────────────────\n";
-    report += "Net Profit: $" + String.format("%.2f", netProfit) + "\n\n";
+    report += "Net Profit: PKR" + String.format("%.2f", netProfit) + "\n\n";
     
     if (netProfit > 0) {
         report += "Status: ✓ PROFIT";

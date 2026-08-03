@@ -66,9 +66,9 @@ private void loadMembershipPlans() {
         setTitle("Membership Management ");
         setSize(new java.awt.Dimension(900, 550));
 
-        jPanel1.setBackground(new java.awt.Color(241, 196, 15));
+        jPanel1.setBackground(new java.awt.Color(153, 102, 255));
 
-        titleLabel.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        titleLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(0, 0, 0));
         titleLabel.setText("Membership Plans Management");
 
@@ -79,7 +79,7 @@ private void loadMembershipPlans() {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(267, 267, 267)
                 .addComponent(titleLabel)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,6 +120,7 @@ private void loadMembershipPlans() {
 
         jButton1.setBackground(new java.awt.Color(46, 204, 113));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Add Plan");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -132,6 +133,7 @@ private void loadMembershipPlans() {
 
         jButton2.setBackground(new java.awt.Color(241, 196, 15));
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Edit Plan");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,6 +143,7 @@ private void loadMembershipPlans() {
 
         jButton3.setBackground(new java.awt.Color(231, 76, 60));
         jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Delete Plan");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +204,7 @@ private void loadMembershipPlans() {
     Object[] message = {
         "Membership ID:", idField,
         "Membership Type:", typeCombo,
-        "Fee ($):", feeField
+        "Fee (PKR):", feeField
     };
     
     int option = JOptionPane.showConfirmDialog(
@@ -234,7 +237,7 @@ private void loadMembershipPlans() {
                     break;
             }
             
-            String fee = "$" + feeField.getText();
+            String fee = "PKR" + feeField.getText();
             
             tableModel.addRow(new Object[]{
                 idField.getText(),
@@ -263,7 +266,7 @@ private void loadMembershipPlans() {
     String membershipId = (String) tableModel.getValueAt(selectedRow, 0);
     String currentType = (String) tableModel.getValueAt(selectedRow, 1);
     String currentFee = (String) tableModel.getValueAt(selectedRow, 2);
-    currentFee = currentFee.replace("$", "");
+    currentFee = currentFee.replace("PKR", "");
     
     String[] types = {"Monthly", "Quarterly", "Semi-Annual", "Annual", "Premium Annual"};
     JComboBox<String> typeCombo = new JComboBox<>(types);
@@ -273,7 +276,7 @@ private void loadMembershipPlans() {
     
     Object[] message = {
         "Membership Type:", typeCombo,
-        "Fee ($):", feeField
+        "Fee (PKR):", feeField
     };
     
     int option = JOptionPane.showConfirmDialog(
@@ -306,7 +309,7 @@ private void loadMembershipPlans() {
                     break;
             }
             
-            String fee = "$" + feeField.getText();
+            String fee = "PKR" + feeField.getText();
             
             tableModel.setValueAt(type, selectedRow, 1);
             tableModel.setValueAt(fee, selectedRow, 2);
