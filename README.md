@@ -1,16 +1,16 @@
 # 🏋️‍♂️ Gym Management System (Java OOP & Swing)
 
-A desktop-based management application built with Java Swing and Object-Oriented Programming (OOP) principles to streamline gym operations, member tracking, staff management, and financial reporting.
+A desktop management application built with Java Swing and Object-Oriented Programming (OOP) principles to streamline gym operations, member tracking, staff administration, and financial reporting.
 
 ---
 
 ## ✨ Key Features
 
-* 👤 **Member Management:** Comprehensive tracking of gym members (`MemberManagementFrame.java`, `MemberDAO.java`).
-* 📊 **Physical Stats Tracking:** Record and monitor member fitness progress and metrics (`PhysicalStatsFrame.java`).
-* 💳 **Finance & Payments:** Track subscription fees, payment records, and revenue streams (`FinanceFrame.java`, `PaymentDAO.java`).
-* 💼 **Staff Administration:** Manage gym trainers, staff schedules, and roles (`StaffManagementFrame.java`, `StaffDAO.java`).
-* 🔐 **Admin Dashboard:** Centralized control panel providing quick navigation to all subsystem modules (`AdminDashboard.java`).
+* **👤 Member Management:** Comprehensive tracking of gym members (`MemberManagementFrame.java`, `MemberDAO.java`).
+* **📊 Physical Stats Tracking:** Record and monitor member fitness progress and health metrics (`PhysicalStatsFrame.java`).
+* **💳 Finance & Payments:** Track subscription fees, payment histories, and overall revenue streams (`FinanceFrame.java`, `PaymentDAO.java`).
+* **💼 Staff Administration:** Manage gym trainers, staff schedules, and operational roles (`StaffManagementFrame.java`, `StaffDAO.java`).
+* **🔐 Admin Dashboard:** Centralized control panel providing quick navigation to all subsystem modules (`AdminDashboard.java`).
 
 ---
 
@@ -18,13 +18,13 @@ A desktop-based management application built with Java Swing and Object-Oriented
 
 * **Language:** Java (JDK 8+)
 * **UI Framework:** Java Swing & AWT (NetBeans Form Designer)
-* **Design Patterns:** 
+* **Architecture & Patterns:**
   * **Data Access Object (DAO):** Decouples business logic from database operations (`MemberDAO`, `PaymentDAO`, `StaffDAO`).
-  * **Model-View-Controller (MVC):** GUI frames separated from underlying data models and database layers.
+  * **Model-View-Controller (MVC):** GUI frames are strictly separated from underlying data models and database operations.
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Structure
 
 ```text
 GymManagementSystem/
@@ -33,7 +33,9 @@ GymManagementSystem/
 │       └── gym/
 │           └── management/
 │               ├── gui/         # Swing UI Frames (AdminDashboard, Frames)
-│               └── ...          # Core DAO logic, Models, and Utilities
+│               ├── dao/         # Data Access Object implementations
+│               ├── model/       # Data entities & domain models
+│               └── util/        # Database connectivity & helper utilities
 ├── build.xml                    # Ant build script
 ├── manifest.mf                  # JAR manifest configuration
 └── README.md                    # Project documentation
